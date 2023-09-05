@@ -1,0 +1,10 @@
+{
+  "name": "@fluffy-spoon/init",
+  "version": "1.0.0",
+  "description": "Installs GitHub action for FluffySpoon setup.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "ffMathy",
+  "license": "MIT"
+}
