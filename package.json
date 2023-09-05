@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Installs GitHub action for FluffySpoon setup.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
   },
   "author": "ffMathy",

@@ -1,14 +1,14 @@
-const https = require('https');
-const fs = require('fs');
-const path = require('path');
+import https from 'https';
+import fs from 'fs';
+import path from'path';
 
-await new Promise(resolve => {
-    const folder = fs.mkdir(path.join(".github", "workflows"), {
+await new Promise(async resolve => {
+    const workflowDirectory = path.join(".github", "workflows");
+    await new Promise(resolve => fs.mkdir(workflowDirectory, {
         recursive: true
-    });
+    }, resolve));
 
-    const file = fs.createWriteStream(path.join(folder, "fluffy-spoon.yml"));
-
+    const file = fs.createWriteStream(path.join(workflowDirectory, "fluffy-spoon.yml"));
     https.get("https://raw.githubusercontent.com/fluffy-spoon/init/main/.github/workflows/fluffy-spoon.yml", function(response) {
         response.pipe(file);
 
